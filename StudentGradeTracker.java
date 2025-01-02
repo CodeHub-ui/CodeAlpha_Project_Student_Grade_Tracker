@@ -1,25 +1,20 @@
 import java.util.*; // Importing the utility package for Scanner and ArrayList
-
 public class StudentGradeTracker {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in); // Scanner for user input
         ArrayList<Integer> grades = new ArrayList<>(); // List to store grades
         String choice; // Variable to store user's choice for continuing input
-
         System.out.println("Welcome to the Student Grade Tracker!"); // Greeting message
-
         // Input grades
         do {
             System.out.print("Enter a student's grade (0-100): ");
             int grade = sc.nextInt(); // Reading the grade input
-
             // Validating the grade and adding it to the list if valid
             if (grade >= 0 && grade <= 100) {
                 grades.add(grade);
             } else {
                 System.out.println("Invalid grade! Please enter a number between 0 and 100.");
             }
-
             // Asking the user if they want to input another grade
             System.out.print("Do you want to enter another grade? (yes/no): ");
             choice = sc.next().toLowerCase(); // Converting the input to lowercase for uniform comparison
